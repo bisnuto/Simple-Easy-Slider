@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html>
+	  
+<head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1" >
+	  <title>Simple Easy Slider</title>
+	  <meta name="description" content="A simple jquery based slider for your web page. With a very light code, and easy instalation, it can be set up to fit any size easily." >
+	<meta name="keywords" content="slider, jquery, javascript, easy, plugin, html, html5, simple">
+	  
+
+    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+</head>
+
+<body>
+
+<!-- Slider HTML -->
+<div class="slider">
+<div class="sliderControll"><div class="SlNextBT"></div><div class="SlPreviousBT"></div></div>
+		
+	<div class="slides">
+
+<!--Insert your images here -->
+		<div><img src="img/img0.jpg" ><h1 class="sliderTitle">Simple Easy Slider</h1><p class="sliderSubTitle">A Light and Easy to install jquery plugin</p><span class="sliderOverlay"></span></div>
+		<div><img src="img/img1.jpg" ><p class="sliderTitle">Simple Easy Slider</p><p class="sliderSubTitle">A Light and Easy to install jquery plugin</p><span class="sliderOverlay"></span></div>
+		<div><img src="img/img2.jpg" ><p class="sliderTitle">Simple Easy Slider</p><p class="sliderSubTitle">A Light and Easy to install jquery plugin</p><span class="sliderOverlay"></span></div>
+		<div><img src="img/img3.jpg" ><p class="sliderTitle">Simple Easy Slider</p><p class="sliderSubTitle">A Light and Easy to install jquery plugin</p><span class="sliderOverlay"></span></div>
+		<div><img src="img/img4.jpg" ><p class="sliderTitle">Simple Easy Slider</p><p class="sliderSubTitle">A Light and Easy to install jquery plugin</p><span class="sliderOverlay"></span></div>   
+		<div><img src="img/img5.jpg" ><p class="sliderTitle">Simple Easy Slider</p><p class="sliderSubTitle">A Light and Easy to install jquery plugin</p><span class="sliderOverlay"></span></div> 
+	</div>
+	
+</div>
+
+<div id="wrap">
+	<div id="content">
+
+		<h3>What is it?</h3>
+		<p>A simple jquery based slider for your web page. With a very light code, and easy instalation, it can be set up to fit any size easily.</p>
+
+		<a href="SimpleEasySlider1.1.rar"><div class="bt">download</div></a>
+		<a href="https://github.com/bisnuto/Simple-Easy-Slider" target="_blank"><div class="bt">view on github</div></a>
+
+		<h3>Installation</h3>
+
+		<h4>1. Insert jquery library and plugin</h4>
+		<p>Just insert the plugin .js file after jquery.</p>
+				<div class="code">
+		     <xmp>
+<script  src="./js/jquery-1.10.2.min.js"></script>
+<script  src="./js/SimpleEasySlider1.1.js"></script>
+			</xmp>
+				</div>
+		
+		<h4>2. Slider HTML</h4>
+		<p>Insert this HTML in your page, put the pictures inside "slides" div, you can load as many pictures as wanted. you can also have a title and a subtitle for each slide</p>
+				<div class="code">
+		     <xmp>
+
+<div class="slider">
+<div class="sliderControll"><div class="SlNextBT"></div><div class="SlPreviousBT"></div></div>
+		
+	<div class="slides">
+
+        <!--Insert your images here -->
+
+		<div><img src="img/img0.jpg" ><p class="sliderTitle">A Simple Title</p><p class="sliderSubTitle">An Easy Subtitle</p><span class="sliderOverlay"></span></div>
+		<div><img src="img/img1.jpg"><p class="sliderTitle">A Simple Title</p><p class="sliderSubTitle">An Easy Subtitle</p><span class="sliderOverlay"></span></div>
+		<div><img src="img/img2.jpg" ><p class="sliderTitle">A Simple Title</p><p class="sliderSubTitle">An Easy Subtitle</p><span class="sliderOverlay"></span></div>
+		<div><img src="img/img3.jpg" ><p class="sliderTitle">A Simple Title</p><p class="sliderSubTitle">An Easy Subtitle</p><span class="sliderOverlay"></span></div>
+		<div><img src="img/img4.jpg" ><p class="sliderTitle">A Simple Title</p><p class="sliderSubTitle">An Easy Subtitle</p><span class="sliderOverlay"></span></div>   
+		<div><img src="img/img5.jpg" ><p class="sliderTitle">A Simple Title</p><p class="sliderSubTitle">An Easy Subtitle</p><span class="sliderOverlay"></span></div> 
+	</div>
+	
+</div>
+			</xmp>
+		</div>
+		<h4>3. Slider CSS</h4>
+		<p>Insert the link of the css file in your page. You can change the slider class to fit the height and width wanted.</p>
+		
+		<div class="code">
+		     <xmp>
+.slider {
+    width:100%;
+    height:500px;
+    margin:0 auto;
+    background-color:white;
+    overflow: hidden;
+}
+			</xmp>
+		</div>
+		
+		<h4>4. Options</h4>
+		<p>You are done with the basic setup, Title, subtitle, color overlay efect and navigation can be easily turned off by easyOptions() function. Just write it on your page after the plugin .js file.</p>
+		
+		<div class="code">
+		     <xmp>
+<script>
+  easyOptions(true, false, false, false);
+</script>
+			</xmp>
+		</div>
+<p>Here is how it works:</p>
+		
+		<div class="code">
+		     <xmp>
+function sliderOptions(title, subTitle, overlay, control) {
+    if ( ! title && ! subTitle && ! overlay && ! control) {
+        $(".sliderTitle, .sliderSubTitle, .sliderOverlay, .sliderControll").css("display","none");
+            return;
+    }
+
+        $(".sliderTitle, .sliderSubTitle, .sliderOverlay, .sliderControll").css("display","block");
+    }
+
+easyOptions(true, false, false, false);
+
+			</xmp>
+		</div>
+
+	</div>
+</div>
+<div id="footer">
+	<p>Copyright © Fernando Souza All Rights Reserved.</p>
+</div>
+
+<script  src="./js/jquery-1.10.2.min.js"></script>
+<script  src="./js/SimpleEasySlider1.1.js"></script>
+<script>
+	easyOptions(true, true, true, true);
+</script>
+
+</body></html>
